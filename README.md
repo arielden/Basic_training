@@ -1,7 +1,7 @@
 # basic_training
 
 
-Conda commands
+Conda commands:
 
 Para crear un entorno offline (no necesita chequear respositorios)
 
