@@ -1,5 +1,3 @@
-# basic_training
-
 BASIC TRAINING
 =======
 
