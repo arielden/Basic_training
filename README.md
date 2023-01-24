@@ -1,18 +1,10 @@
 BASIC TRAINING
 =======
 
-alpha software
+What is this?
 --------------
 
-This is alpha software. All the test cases and examples work but there will be
-many issues outside of the test framework. The CATIA com interface is huge and
-I'm currently just attacking the items I think will be most useful. The
-framework is in place for others to contribute so if you know CATIA and python
-please do contribute. Bonus points for adding tests too.
-
-I have limited access to CATIA licences / workbenches so will not be able to
-support those I can't test. If your company would like support for additional
-workbenches adding to pycatia and can provide a license please contact me.
+A place to practice python and experiment with diverse modues.
 
 
 Aux commands
@@ -20,7 +12,7 @@ Aux commands
 
 Conda commands:
 
-  To create an offline virtual env (it don't need to check repos)
+  To create an offline virtual env (no need to check the repositories)
 
     conda create --offline -n [nombre]
 
