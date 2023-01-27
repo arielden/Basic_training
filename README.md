@@ -20,7 +20,7 @@ virtualenv commands:
 
   To create a virtual env (venv)
 
-    python3 -m venv /path/to/new/virtual/environment
+    python -m venv /path/to/new/virtual/environment
 
 
 Requirements
