@@ -7,8 +7,17 @@ What is this?
 A place to practice python and experiment with diverse modues.
 
 
+Shortcuts
+----------------
+
+CTRL + K + C --> Comment selected lines.
+CTRL + K + U --> Uncomment selected lines.
+
 Aux commands
 ----------------
+Python useful commands:
+  dir(__builtins__)
+
 
 Conda commands:
 
