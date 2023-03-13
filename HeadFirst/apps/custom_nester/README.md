@@ -6,9 +6,16 @@ What is this?
 
 This is a module created basically for test and learning purposes.
 
-custom_nester.py module, provides the function called
-print_lol() which prints lists that may or may not include nested lists.
-the funtions needs one requiered argument (the list) and one optional (number of tabs to indent the printed result)
+    print_lol function takes a positional argument called 'the_list', which is any python list
+    (of, possibly nested lists). Each data item in the provided list is recursively printed
+    to the screen on its own line. (or into a file)
+    
+    ---Arguments----------(default value)
+    1st - 'the_list'
+    2nd - 'indent' is used to activate the indentation. (False)
+    3rd - 'level' is used to insert tab-stops when a nested list is encontered. (0)
+    4th - 'print_in' gives us the ability to print the output in separated files or screen. (sys.stdout)
+
 
 
 Requirements

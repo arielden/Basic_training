@@ -7,7 +7,7 @@ with open("./README.md", "r") as f:
 
 setup(
     name="custom_nester",
-    version="1.2.0",
+    version="1.3.0",
     py_modules      =['custom_nester'],
     description="A simple printer of nested lists",
     long_description=long_description,
