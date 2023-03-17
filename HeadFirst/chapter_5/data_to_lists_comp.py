@@ -31,9 +31,25 @@ clean_julie = sorted([sanitize(each_element) for each_element in julie])
 clean_mikey = sorted([sanitize(each_element) for each_element in mikey])
 clean_sarah = sorted([sanitize(each_element) for each_element in sarah])
 
+unique_james = []
+unique_julie = []
+unique_mikey = []
+unique_sarah = []
 
-print(james)
-print(clean_james)
-print(clean_julie)
-print(clean_mikey)
-print(clean_sarah)
+for each in clean_james:
+    if each not in unique_james:
+        unique_james.append(each)
+for each in clean_julie:
+    if each not in unique_julie:
+        unique_julie.append(each)
+for each in clean_mikey:
+    if each not in unique_mikey:
+        unique_mikey.append(each)
+for each in clean_sarah:
+    if each not in unique_sarah:
+        unique_sarah.append(each)
+
+print(unique_james[0:3])
+print(unique_julie[0:3])
+print(unique_mikey[0:3])
+print(unique_sarah[0:3])
