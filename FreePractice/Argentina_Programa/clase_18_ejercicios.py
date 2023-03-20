@@ -10,7 +10,7 @@ def promedio(nota1, nota2, nota3):
 aprobados = 0
 regulares = 0
 desaprobados = 0
-for i in range(1,3):
+for i in range(1,11):
     print(f'Para el alumno número {i}')
     n1 = int(input('Ingrese la primer nota: '))
     n2 = int(input('Ingrese la segunda nota: '))
