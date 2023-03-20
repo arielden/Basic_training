@@ -7,23 +7,23 @@ def promedio(nota1, nota2, nota3):
     prom = (nota1 + nota2 + nota3)/3
     return prom
 
-# aprobados = 0
-# regulares = 0
-# desaprobados = 0
-# for i in range(1,3):
-#     print(f'Para el alumno número {i}')
-#     n1 = int(input('Ingrese la primer nota: '))
-#     n2 = int(input('Ingrese la segunda nota: '))
-#     n3 = int(input('Ingrese la tercer nota: '))
-#     prom_final = promedio(n1, n2, n3)
-#     if prom_final >= 7:
-#         aprobados += 1
-#     elif prom_final > 5 and prom_final < 7:
-#         regulares += 1
-#     else:
-#         desaprobados += 1
+aprobados = 0
+regulares = 0
+desaprobados = 0
+for i in range(1,3):
+    print(f'Para el alumno número {i}')
+    n1 = int(input('Ingrese la primer nota: '))
+    n2 = int(input('Ingrese la segunda nota: '))
+    n3 = int(input('Ingrese la tercer nota: '))
+    prom_final = promedio(n1, n2, n3)
+    if prom_final >= 7:
+        aprobados += 1
+    elif prom_final > 5 and prom_final < 7:
+        regulares += 1
+    else:
+        desaprobados += 1
 
-# print(f'De 10 alumnos, aprobaron {aprobados}, son regulares {regulares} y desaprobaron {desaprobados}')
+print(f'De 10 alumnos, aprobaron {aprobados}, son regulares {regulares} y desaprobaron {desaprobados}')
 
 """
 Ejercicio 2
@@ -73,7 +73,3 @@ def validez_fecha(dd, mm, aaaa):
     else:
         val = False
     return val
-
-print(validez_fecha(31,4,2023))
-#print(factorial(5))
-#concatena(123, 456)
