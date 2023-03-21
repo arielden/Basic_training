@@ -17,20 +17,20 @@ e. Mayor compra realizada.
 f. Compra de menor valor."""
 
 ventas = 0
-des15 = 0
-des20 = 0
-des_t15 = 0
-des_t20 = 0
-#mayor_venta = 0
-#menor_venta = 0
-des_total = 0
-#des_promedio = 0
+descuento15 = 0
+descuento20 = 0
+descuento_total_15 = 0
+descuento_total_20 = 0
+mayor_venta = 0
+monto_total_desc = 0
+monto_desc = 0
 
+ 
 def desc_20(monto):
     monto_d20 = monto * 0.80
     print(f"El monto a pagar (con descuento) es: {monto_d20}")
     return monto_d20
-
+ 
 def desc_15(monto):
     monto_d15 = monto * 0.85
     print(f"El monto a pagar (con descuento) es: {monto_d15}")
@@ -42,33 +42,36 @@ while monto != -1:
     if monto > 0:
         ventas += 1
         if monto >= 1000 and monto <= 2000:
-            des15 += 1
+            descuento15 += 1
             monto = desc_15(monto)
-            des_t15 = des_t15 + monto
+            descuento_total_15 = descuento_total_15 + monto
         elif monto >= 2000:
-            des20 += 1
+            descuento20 += 1
             monto = desc_20(monto)
-            des_t20 = des_t20 + monto
+            descuento_total_20 = descuento_total_20 + monto
         elif monto < 1000:
             print(f"El monto a pagar no tiene descuento: {monto}")
-        print(f"El monto a pagar es {monto}")
-        des_total = des_total + monto
+        monto_total_desc = monto_total_desc + monto
     else:
         print("El monto debe ser positivo")
+        
     monto = float(input("Ingrese el monto de la venta (-1 para salir): "))
-
+ 
     if monto > mayor_venta:
         mayor_venta = monto
     if monto != -1:
         if monto < menor_venta:
             menor_venta = monto
-if des15 or des20 != 0:
-    des_promedio = des_total/(des15+des20)
-
-print(f" ventas totales {ventas}, ventas con 15%: {des15},ventas con 20%: {des20}, ventas sin desc {ventas-des15-des20}")
-print(f"el monto total descontado (15%) fué de: {des_t15}")
-print(f"el monto total descontado (20%) fué de: {des_t20}")
-print(f"La mayor compra realizada fué de: {mayor_venta}, y la de menor valor {menor_venta}")
-print(f"El monto promedio de ventas con descuento aplicado es de: {des_promedio}")
-print(f"El porcentaje de ventas con descuento es de: {((des15+des20)/ventas)*100}%")
-print(f"El porcentaje de ventas sin descuento es de: {(1-((des15+des20)/ventas))*100}%")
+if ventas > 0:
+    print(f" ventas totales {ventas}, ventas con 15%: {descuento15},ventas con 20%: {descuento20}, ventas sin desc {ventas-descuento15-descuento20}")
+    print(f"el monto total descontado (15%) fué de: {descuento_total_15}")
+    print(f"el monto total descontado (20%) fué de: {descuento_total_20}")
+    print(f"La mayor compra realizada fué de: {mayor_venta}, y la de menor valor {menor_venta}")
+    if descuento15 + descuento20 >0:
+        print(f"El monto promedio de ventas con descuento aplicado es de: {monto_total_desc/(descuento15+descuento20)}")
+        print(f"El porcentaje de ventas con descuento es de: {((descuento15+descuento20)/ventas)*100}%")
+        print(f"El porcentaje de ventas sin descuento es de: {(1-((descuento15+descuento20)/ventas))*100}%")
+    else:
+        print('No se realizaron ventas con descuentos')
+else:
+    print('No se realizaron ventas')
