@@ -1,17 +1,19 @@
 
 from string import Template
 
+my_path = "/home/arield/Documentos/CODE/Python/Basic_training/HeadFirst/chapter_7/webapp/"
+
 def start_response(resp="text/html"):
     return('Content-type: ' + resp + '\n\n')
 
 def include_header(the_title):
-    with open('templates/header.html') as headf:
+    with open(f'{my_path}templates/header.html') as headf:
         head_text = headf.read()
     header = Template(head_text)
     return(header.substitute(title=the_title))
 
 def include_footer(the_links):
-    with open('templates/footer.html') as footf:
+    with open(f'{my_path}templates/footer.html') as footf:
         foot_text = footf.read()
     link_string = ''
     for key in the_links:
