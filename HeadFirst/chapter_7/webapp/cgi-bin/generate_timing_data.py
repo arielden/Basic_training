@@ -1,7 +1,8 @@
-#! /usr/local/bin/python3
+#! /home/arield/miniconda3/envs/training_env/bin/python
 
 import cgi
 
+# CGI tracking: useful while the app it's being developed.
 import cgitb
 cgitb.enable()
 

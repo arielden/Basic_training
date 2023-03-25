@@ -1,4 +1,4 @@
-#! /usr/local/bin/python3
+#! /home/arield/miniconda3/envs/training_env/bin/python
 
 import glob
 
