@@ -3,8 +3,8 @@
 import cgi
 
 # CGI tracking: useful while the app it's being developed.
-import cgitb
-cgitb.enable()
+# import cgitb
+# cgitb.enable()
 
 import athletemodel
 import yate
