@@ -1,0 +1,15 @@
+
+1- Ejecutar el siguiente comando para generar los archivos de destribución (VER PUNTO 1 ALTERNATIVO)
+    python3 setup.py bdist_wheel sdist
+
+1- Ejecutar el siguiente comando para generar los archivos de destribución (COMANDO CORTO, FUNCIONA)
+python3 setup.py sdist
+
+2- Para instalar el paquete localmente ejecutar. (OPCIONAL)
+    pip install .
+
+3- Para chequear la distribución antes de subirla a PyPI
+    twine check dist/*
+
+4- El siguiente comando permite subir la distribución a PyPI.
+    twine upload dist/*
