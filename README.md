@@ -19,25 +19,28 @@
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 
 
-## Shorcuts
+## Shorcuts and useful commands
 - General
-  Comment selected lines
-  `CTRL + K + C`
-  Uncomment selected lines
-  `CTRL + K + U`
+  -Comment selected lines `CTRL + K + C`
+  -Uncomment selected lines `CTRL + K + U`
 
 - Conda
-  To create an offline conda virtual env (no need to check the repositories)
-  `conda create --offline -n [nombre]`
+  -To create an offline conda virtual env (no need to check the repositories)
+  -`conda create --offline -n [nombre]`
 
 - Virtualenv
-  To create a virtual env (venv)
-  `python -m venv /path/to/new/virtual/environment`
+  -To create a virtual env (venv)
+  -`python -m venv /path/to/new/virtual/environment`
 
 - Git
-  `git add *`
-  `git commit -a`
-  `git push`
+  -`git add *`
+  -`git commit -a`
+  -`git push`
+
+- Pip
+  -to get information about the pip cache `pip cache info`
+  -to remove all the cache files `pip cache remove *`
+  -to reset the pip cache to default `pip cache purge`
   
 ## Screenshots
 ![Example screenshot](./img/screenshot.png)
