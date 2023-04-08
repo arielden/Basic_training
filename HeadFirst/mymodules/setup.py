@@ -4,7 +4,7 @@ with open("./README.md", "r") as f:
     long_description = f.read()
 
 setup(
-    name='custom-vsearch',
+    name='vsearch',
     version='1.0',
     description='Search for specific letters into a given phrase.',
     author='Ariel Denaro',

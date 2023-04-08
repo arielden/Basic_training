@@ -1,0 +1,5 @@
+ImmutableMultiDict([('phrase', 'chamaco'), ('letters', 'aepo')])|127.0.0.1|Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0|{'o', 'a'}
+ImmutableMultiDict([('phrase', 'dragón'), ('letters', 'aeo')])|127.0.0.1|Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0|{'a'}
+ImmutableMultiDict([('phrase', 'chapulín'), ('letters', 'aeio')])|127.0.0.1|Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0|{'a'}
+ImmutableMultiDict([('phrase', 'This is a new phrase'), ('letters', 'ysadfj')])|127.0.0.1|Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0|{'s', 'a'}
+ImmutableMultiDict([('phrase', 'let me make another search'), ('letters', 'asdre')])|127.0.0.1|Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0|{'r', 'e', 's', 'a'}

@@ -25,8 +25,8 @@
   -Uncomment selected lines `CTRL + K + U`
 
 - Conda
-  -To create an offline conda virtual env (no need to check the repositories)
-  -`conda create --offline -n [nombre]`
+To create an offline conda virtual env (no need to check the repositories)
+`conda create --offline -n [nombre]`
 
 - Virtualenv
   -To create a virtual env (venv)
@@ -41,6 +41,11 @@
   -to get information about the pip cache `pip cache info`
   -to remove all the cache files `pip cache remove *`
   -to reset the pip cache to default `pip cache purge`
+
+- Linux
+  - Create a ZIP archive containing the test_directory directory and its contents. Notice when you create the archive using the -r argument that you see a verbose output detailing each stage of the command as it descends into the directory and archives the files and folder.
+
+  `zip -r new_archive test_directory`
   
 ## Screenshots
 ![Example screenshot](./img/screenshot.png)
