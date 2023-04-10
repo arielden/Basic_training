@@ -14,7 +14,7 @@ _SQL = """insert into log
         (phrase, letters, ip, browser_string, results)
         values
         (%s, %s, %s, %s, %s)"""
-cursor.execute(_SQL, ('hitch-hicker', 'xyz', '127.0.0.1', 'Safari', 'set()'))
+cursor.execute(_SQL, ('hitch-hicker', 'xyz', '127.0.0.1', 'Chrome', 'set()'))
 
 conn.commit()
 

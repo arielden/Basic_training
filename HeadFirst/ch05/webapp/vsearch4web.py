@@ -1,17 +1,16 @@
 import html
-#import mysql.connector
+import mysql.connector
 from flask import Flask, render_template, request, escape
 from vsearch import search4letters
 
 app = Flask(__name__)
 
-def log_request(req: 'flask_request', res: str) -> None:
+def log_request(req, res: str) -> None:
     dbconfig = {'host': '0.0.0.0',
                 'port': 33060,
                 'user': 'vsearch',
                 'password': 'vsearchpasswd',
                 'database': 'vsearchlogDB',}
-    import mysql.connector
     conn = mysql.connector.connect(**dbconfig)
     cursor = conn.cursor()
 
@@ -19,23 +18,16 @@ def log_request(req: 'flask_request', res: str) -> None:
             (phrase, letters, ip, browser_string, results)
             values
             (%s, %s, %s, %s, %s)"""
-    
-    # cursor.execute(_SQL, (req.form['phrase'],
-    #                       req.form['letters'],
-    #                       req.remote_addr,
-    #                       req.user_agent,
-    #                       res, ))
 
-    
-    print(req.user_agent)
-    cursor.execute(_SQL, (req.form['phrase'], req.form['letters'], req.remote_addr, str(req.user_agent), res))
+    cursor.execute(_SQL, (req.form['phrase'],
+                          req.form['letters'],
+                          req.remote_addr,
+                          'Chrome', #req.user_agent returns a non valid DB value.
+                          res))
   
     conn.commit()
     cursor.close()
     conn.close()
-
-    # with open('vsearch.log', 'a') as log:
-    #     print(req.form, req.remote_addr, req.user_agent, res, file=log, sep='|')
 
 @app.route('/search4', methods=['POST'])
 def do_search() -> 'html':
