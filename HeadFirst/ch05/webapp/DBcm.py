@@ -5,7 +5,8 @@ class UseDatabase:
     def __init__(self, config: dict) -> None:
         self.configuration = config
     
-    def __enter__ (self) -> 'cursor':
+    def __enter__ (self):
+        """Returns a cursor"""
         self.conn = mysql.connector.connect(**self.configuration)
         self.cursor = self.conn.cursor()
         return self.cursor
